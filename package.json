@@ -1,0 +1,45 @@
+{
+  "name": "remax-desktop-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "基于html、remax、cordova的桌面开发模版",
+  "main": "index.js",
+  "keywords": [
+    "html",
+    "react",
+    "remax",
+    "cordova",
+    "desktop",
+    "web-app"
+  ],
+  "author": "njroyin@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev-web": "remax build -w -t web",
+    "build-web": "cross-env NODE_ENV=production remax build -t web",
+    "run-electron": "npm run build-web && cordova run electron --nobuild ",
+    "build-electron": "npm run build-web && cordova build electron --release",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cordova-electron": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "remax": "^2.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "@types/react": "^16.9.16",
+    "typescript": "^3.7.3",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "electron-builder": "^22.7.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "electron"
+    ]
+  }
+}

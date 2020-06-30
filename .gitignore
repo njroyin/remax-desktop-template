@@ -1,0 +1,5 @@
+node_modules
+dist
+platforms/electron/build
+.DS_Store 
+package-lock.json
